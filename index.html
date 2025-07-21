@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tourism Planner</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#plan">Plan Trip</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero" id="home">
+        <h2>Discover Your Next Adventure</h2>
+        <p>Plan, explore, and experience the world with ease.</p>
+        <button onclick="scrollToSection('plan')">Start Planning</button>
+    </section>
+    <section class="destinations" id="destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destination-list">
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Paris">
+                <h3>Paris</h3>
+                <p>The city of lights and love.</p>
+            </div>
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Tokyo">
+                <h3>Tokyo</h3>
+                <p>Experience the vibrant culture of Japan.</p>
+            </div>
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80" alt="New York">
+                <h3>New York</h3>
+                <p>The city that never sleeps.</p>
+            </div>
+        </div>
+    </section>
+    <section class="plan" id="plan">
+        <h2>Plan Your Trip</h2>
+        <form id="tripForm">
+            <div class="form-row">
+                <div style="display: flex; flex-direction: column;">
+                    <label for="destination">Destination:</label>
+                    <select id="destination" name="destination" required>
+                        <option value="">Select a destination</option>
+                        <option value="Paris">Paris</option>
+                        <option value="Tokyo">Tokyo</option>
+                        <option value="New York">New York</option>
+                        <option value="Sydney">Sydney</option>
+                        <option value="Cape Town">Cape Town</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro</option>
+                        <option value="Kathmandu">Kathmandu</option>
+                    </select>
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                    <label for="start-date">Start Date:</label>
+                    <input type="date" id="start-date" name="start-date" required>
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                    <label for="end-date">End Date:</label>
+                    <input type="date" id="end-date" name="end-date" required>
+                </div>
+            </div>
+            <button type="submit">Add to Plan</button>
+        </form>
+        <div id="planList"></div>
+    </section>
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Tourism Planner. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
